@@ -113,8 +113,6 @@ export const SmallPrice = styled.p`
   }
 `
 
-
-
 export const ProductPicture = styled.img`
   width: 100%;
   height: 70%;

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Example1 from '../Assets/KENWCN.png';
+import Example1 from '../Assets/gillete_pink.png';
 import Example2 from '../Assets/gillete_grey.png';
 import GoldStar from '../Assets/star.png';
 import GreyStar from '../Assets/star_grey.png';
 import LightStar from '../Assets/star_ly.png';
 import Background from '../Assets/colors_background.png';
-import Vertical from '../Assets/background_vertical.png'
+import Vertical from '../Assets/background_vertical.png';
 import {
   Container,
   Side,
