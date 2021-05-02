@@ -1,10 +1,18 @@
 import {
   SearchPage,
+  PriceComparison
 } from './components';
+import {
+  AppBox
+} from './AppStyles';
 
 function App() {
   return (
-    <SearchPage />
+    <AppBox>
+      <SearchPage />
+      <PriceComparison />
+    </AppBox>
+
   );
 }
 
