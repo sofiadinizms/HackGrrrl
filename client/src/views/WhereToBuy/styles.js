@@ -42,7 +42,7 @@ export const ContainerIconBottom = styled.div`
     width: 50vw;
     background-color: #E7475A;
     align-items: center;
-    height: 90px;
+    height: 91px;
 `;
 
 export const RecommendBrand = styled.div`

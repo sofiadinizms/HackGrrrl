@@ -5,4 +5,5 @@ export const AppBox = styled.section`
   padding: 0;
   box-sizing: border-box;
   background-color: #FFFBE9;
+  overflow-x: hidden;
 `;
