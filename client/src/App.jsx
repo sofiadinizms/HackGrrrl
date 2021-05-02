@@ -1,7 +1,8 @@
 import {
   SearchPage,
   PriceComparison,
-  FeatComparison
+  FeatComparison,
+  Footer
 } from './components';
 import {
   AppBox
@@ -13,6 +14,7 @@ function App() {
       <SearchPage />
       <PriceComparison />
       <FeatComparison />
+      <Footer />
     </AppBox>
 
   );
