@@ -25,7 +25,7 @@ function WhereToBuy() {
 
         </Container>
     <ContainerIconBottom>
-    <ImgIconContainer href="#" className='bottom-icon'>
+    <ImgIconContainer href="#home" className='bottom-icon'>
          <img src={Icon} />
      </ImgIconContainer>
     </ContainerIconBottom>
