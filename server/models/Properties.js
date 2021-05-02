@@ -2,19 +2,15 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const Post = new keystone.List('Posts');
+const Proprieties = new keystone.List('Proprieties');
 
-Post.add({
-  name: {
+Proprieties.add({
+  productsProperties: {
     type: Types.Text,
     required: true,
     initial: true,
     index: true,
-  },
-  image: {
-    type: Types.CloudinaryImages,
-    require: true,
-  },
+  }
 });
 
-Post.register();
+Proprieties.register();

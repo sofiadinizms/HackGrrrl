@@ -1,5 +1,5 @@
-const keystone = require('keystone');
-const User = keystone.list('User');
+import { list } from 'keystone';
+const User = list('User');
 
 exports = module.exports = (done) => {
 	new User.model({
