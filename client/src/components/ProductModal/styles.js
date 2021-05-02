@@ -3,10 +3,10 @@ import Theme from '../../global/theme';
 
 
 export const ContainerModal = styled.div`
-width: 40%;
 height: auto;
 align-items: center;
 padding: 0 30px;
+margin-bottom: 30px;
 background: #FFFFFF;
 box-shadow: 0px 3.07167px 9.13316px rgba(205, 49, 0, 0.18);
 border-radius: 20.5237px;

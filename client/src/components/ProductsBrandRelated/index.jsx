@@ -12,9 +12,7 @@ return(
             shshsh
         </Price>
     </InfoContainer>
-    <div>
     <Button href={link}>{'> Comprar'}</Button>
-    </div>
 </Container>
 )
 }
