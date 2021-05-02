@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
    display: flex;
+
+   @media (max-width: 1074px){
+       flex-direction: column;
+   }
+
 `;
 
 export const ImgIconContainer = styled.a`
@@ -26,7 +31,24 @@ cursor: pointer;
     border-top-left-radius: 0px;
 border-top-right-radius: 0px;
     margin: 0px;
+    @media (max-width: 688px){
+    left: 40%;
 }
+@media (max-width: 480px){
+    left: 35%;
+}
+}
+
+@media (max-width: 1074px){
+    margin: -90px 0px;
+}
+
+@media (max-width: 688px){
+    left: 40%;
+}
+@media (max-width: 462px){
+        left: 35%;
+    }
 `;
 export const ChoiceIsYour = styled.div`
 display: flex;
@@ -36,6 +58,13 @@ height: auto;
     background-color: #E7475A;
     align-items: center;
 
+@media (max-width: 1074px){
+    width: 100vw;
+}
+
+@media (max-width: 690px){
+       padding: 40px;
+   }
 `;
 
 export const ContainerIconBottom = styled.div`
@@ -43,6 +72,10 @@ export const ContainerIconBottom = styled.div`
     background-color: #E7475A;
     align-items: center;
     height: 91px;
+
+    @media (max-width: 1074px){
+        background: none;
+    }
 `;
 
 export const RecommendBrand = styled.div`
@@ -51,6 +84,10 @@ flex-direction: column;
 height: auto;
 width: 48.9vw;
 align-items: center;
+
+@media (max-width: 1074px){
+    width: 100vw;
+}
 `;
 
 export const Title = styled.h2`
@@ -61,6 +98,21 @@ line-height: 2px;
 color: #FFFBE9;
 &.recommend{
 color: #E7475A;
+@media (max-width: 1074px){
+    margin-top: 114px;
+}
+
+@media (max-width: 690px){
+    font-size: 47.94px;
+}
+}
+
+@media (max-width: 1074px){
+    margin: 40px 0px;
+}
+
+@media (max-width: 690px){
+    font-size: 47.94px;
 }
 `;
 
@@ -71,5 +123,12 @@ font-size: 18px;
 color: #FFFBE9;
 &.recommend{
 color: #E7475A;
+@media (max-width: 690px){
+    font-size: 16.44px;
+}
+}
+
+@media (max-width: 690px){
+    font-size: 16.44px;
 }
 `;
