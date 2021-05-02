@@ -42,7 +42,27 @@ Products.add({
     required: true,
     initial: true
   },
-  propertie3: {
+  propertie4: {
+    type: Types.Text,
+    required: true,
+    initial: true
+  },
+  propertie5: {
+    type: Types.Text,
+    required: true,
+    initial: true
+  },
+  propertie6: {
+    type: Types.Text,
+    required: true,
+    initial: true
+  },
+  propertie7: {
+    type: Types.Text,
+    required: true,
+    initial: true
+  },
+  propertie8: {
     type: Types.Text,
     required: true,
     initial: true
