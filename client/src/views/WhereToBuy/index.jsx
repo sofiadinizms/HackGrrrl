@@ -2,23 +2,25 @@ import React from 'react';
 import { ProductModal } from '../../components';
 import { ChoiceIsYour, Container, RecommendBrand, ImgIconContainer, Title, Description, ContainerIconBottom } from './styles';
 import Icon from '../../components/Assets/Vector.svg';
+import aos from 'aos';
 
 function WhereToBuy() {
+    aos.init();
     return (
         <>
-        <Container>
-            <ImgIconContainer href="#">
+        <ImgIconContainer href="#whereToBuy" >
                 <img src={Icon} />
             </ImgIconContainer>
-            <ChoiceIsYour>
-                <Title>onde comprar</Title>
-                <Description>a escolha é sua!</Description>
+        <Container>
+            <ChoiceIsYour id="whereToBuy" >
+                <Title data-aos="fade-up" >onde comprar</Title>
+                <Description data-aos="fade-up" >a escolha é sua!</Description>
                 <ProductModal />
                 <ProductModal />
             </ChoiceIsYour>
-            <RecommendBrand>
-                <Title className='recommend'>recomendados</Title>
-                <Description className='recommend'>produtinhos livres de taxa rosa para você :)</Description>
+            <RecommendBrand >
+                <Title data-aos="fade-up" className='recommend'>recomendados</Title>
+                <Description data-aos="fade-up" className='recommend'>produtinhos livres de taxa rosa para você :)</Description>
                 <ProductModal />
                 <ProductModal />
             </RecommendBrand>
