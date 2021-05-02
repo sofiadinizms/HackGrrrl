@@ -17,8 +17,9 @@ function SearchPage(){
     <Container img={Background}>
       <Content>
         <Title><b>Taxa Rosa</b> é o preço que se paga por ser consumidora</Title>
-        <Description>Produtos de cuidados pessoais com marketing direcionado para mulheres são cerca de 13% mais caros do que produtos exatamente iguais direcionados para homens ou unissex.
+        <Description id='big'>Produtos de cuidados pessoais com marketing direcionado para mulheres são cerca de 13% mais caros do que produtos exatamente iguais direcionados para homens ou unissex.
         Quer saber como ele pode afetar suas compras? Comece procurando um produto:</Description>
+        <Description id='short'>Quer saber como ele pode afetar suas compras? Comece procurando um produto:</Description>
         <Space id='search'>
           <Search placeholder="Digite aqui nome do produto" size='large' onSearch={onSearch} enterButton id='input'/>
         </Space>

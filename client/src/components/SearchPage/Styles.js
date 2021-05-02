@@ -30,6 +30,10 @@ export const Container = styled.section`
     }
   }
 
+  @media (max-width: 768px){
+   flex-flow: row wrap;
+   align-content: flex-start; 
+  }
   
 `
 export const Content = styled.div`
@@ -41,11 +45,39 @@ export const Content = styled.div`
   
   #search{
     width: 54%;
+    color: ${Theme.colors.orange};
   }
     .ant-space-item{
       width: 100%;
     }
+  
+  #short{
+    display: none;
+  }
 
+  #big{
+    display: inline;
+  }
+
+  #input{
+    color: ${Theme.colors.orange};
+  }
+  
+  @media (max-width: 768px){
+    width: 82%;
+    margin-top: 35px;
+
+    #search{
+      width: 100%;
+    }
+    #short{
+      display: inline;
+    }
+
+    #big{
+      display: none;
+    }
+  }
 `
 
 export const Title = styled.h1`
@@ -55,6 +87,11 @@ export const Title = styled.h1`
   font-weight: 400;
   text-align: center;
   margin-bottom: 0;
+  
+  @media (max-width: 768px){
+    font-size: 36px;
+    text-align: left;
+  }
 `
 
 export const Description = styled.p`
@@ -65,4 +102,10 @@ export const Description = styled.p`
   text-align: center;
   margin-bottom: 50px;
   width: 75%;
+
+  @media (max-width: 768px){
+    text-align: left;
+    width: 100%;
+  }
 `
+
