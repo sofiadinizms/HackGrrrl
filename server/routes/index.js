@@ -3,7 +3,6 @@ const keystone = require('keystone');
 const cors = require('cors');
 
 const Products = keystone.list('Products');
-const Proprieties = keystone.list('Proprieties');
 const WhereToBuy = keystone.list('WhereToBuy');
 
 module.exports = (app) => {
@@ -15,16 +14,6 @@ module.exports = (app) => {
 
   app.get('/api/products', (req, res) => {
     Products.model.find((err, data) => {
-      if (err) {
-        res.status(500).send('DB Error');
-      } else {
-        res.send(data);
-      }
-    });
-  });
-
-  app.get('/api/productsProperties', (req, res) => {
-    Proprieties.model.find((err, data) => {
       if (err) {
         res.status(500).send('DB Error');
       } else {
