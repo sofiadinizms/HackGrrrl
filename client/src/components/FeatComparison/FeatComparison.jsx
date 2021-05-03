@@ -1,4 +1,5 @@
-import React from 'react';
+import {React,useState , useEffect} from 'react';
+import axios from 'axios';
 import Example1 from '../Assets/gillete_pink.png';
 import Example2 from '../Assets/gillete_grey.png';
 import Check from '../Assets/check.png';
@@ -17,20 +18,33 @@ import {
 import {Side} from '../PriceComparison/Styles';
 
 function FeatComparison (){
+  const [product, setProduct] = useState([]);
+
+  const loadProduct = async() => {
+    const res = await axios.get('http://localhost:3001/api/products');
+    setProduct(res.data);
+  }
+
+  useEffect(() => {
+    loadProduct();
+  }, [])
+
   return(
+    <>
+    {product?.map(({_id, name,name2,price1,price2, propertie1, propertie2, propertie4}) => (
     <Container>
       <Side isPink>
         <Content>
           <Title isPink>Aparência diferente...</Title>
           <WhiteCard>
-            <Name isName>Gillete Venus</Name>
+            <Name isName>{name}</Name>
             <Picture src={Example1}/>
-            <Name>R$22,34</Name>
+            <Name>{price1}</Name>
           </WhiteCard>
           <WhiteCard>
-            <Name isName>Gillete Mach3</Name>
+            <Name isName>{name2}</Name>
             <Picture src={Example2}/>
-            <Name>R$14,99</Name>
+            <Name>{price2}</Name>
           </WhiteCard>
         </Content>
       </Side>
@@ -40,23 +54,23 @@ function FeatComparison (){
           <FeatBlock>
             <FeatItem>
               <OrangeCheck src={Check} />
-              <FeatName>Tres laminas</FeatName>
+              <FeatName>{propertie1}</FeatName>
             </FeatItem>
             <FeatItem>
               <OrangeCheck src={Check} />
-              <FeatName>Tres laminas</FeatName>
+              <FeatName>{propertie2}</FeatName>
             </FeatItem>
             <FeatItem>
               <OrangeCheck src={Check} />
-              <FeatName>Tres laminas</FeatName>
+              <FeatName>{propertie4}</FeatName>
             </FeatItem>
           </FeatBlock>
         </Content>
 
       </Side>
-
-
     </Container>
+    ))}
+    </>
   )
 }
 
