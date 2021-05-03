@@ -20,3 +20,15 @@ Template utilizado para avalização de code review na Hack GRRRL 2021 ✨👩�
 ## Se vocês fossem participar de um hackathon semana que vem, fariam algo de diferente com relação às escolhas das tecnologias utilizadas?
 - Acho que mudariamos a tecnologia do Back-end para TypeORM, que nos daria mais liberdade para criar relacionamentos
 
+## example.env
+```
+    PORT=[PORT]
+    MONGO_URI=[MONGO_URI]
+    COOKIE_SECRET=[COOKIE_SECRET]
+    CLOUDINARY_URL=[CLOUDINARY_URL]
+```
+Sendo:
+- [PORT] porta em que o servidor vai rodar (utilizamos o 3001)
+- [MONGO_URI] uri do MongoDB
+- [COOKIE_SECRET] string aleatória de validação
+- [CLOUDINARY_URL] is the url you got from [step 3.2](##3.-create-cloudinary-account)
