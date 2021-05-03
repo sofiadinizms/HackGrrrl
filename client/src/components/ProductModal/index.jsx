@@ -12,8 +12,8 @@ function ProductModal({ title, subtitle, image }) {
             <img src={productExample} />
             <ContainerInfo>
                 <div>
-                <TitleModal>Exemplo</TitleModal>
-                <SubTitle>aaaaa</SubTitle>
+                <TitleModal>Gillete Venus</TitleModal>
+                <SubTitle>Gillete</SubTitle>
              </div>
             <ProductsBrandRelated />
             <ProductsBrandRelated />
