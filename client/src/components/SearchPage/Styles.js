@@ -11,6 +11,7 @@ export const Container = styled.section`
   background-image: url(${props => props.img});
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   .ant-btn-primary, .ant-btn-primary:hover, .ant-btn-primary:focus{
     background-color: ${Theme.colors.pink};
