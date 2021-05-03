@@ -4,6 +4,11 @@ import {
   FeatComparison,
   Footer
 } from './components';
+
+import {
+  WhereToBuy
+} from './views';
+
 import {
   AppBox
 } from './AppStyles';
@@ -15,6 +20,7 @@ function App() {
       <SearchPage />
       <PriceComparison />
       <FeatComparison />
+      <WhereToBuy />
       <Footer />
       <GlobalStyle />
     </AppBox>
