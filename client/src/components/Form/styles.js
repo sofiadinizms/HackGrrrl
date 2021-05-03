@@ -10,6 +10,11 @@ padding: 12px 23px;
 position: absolute;
 right: 30px;
 top: 50px;
+
+@media (max-width: 700px){
+    top: 46%;
+    right: 40%;
+}
 `;
 
 export const ModalContact = styled.div`
@@ -61,5 +66,10 @@ border: 1px solid #E7475A;
 .buttons-container{
     margin: 20px 0;
     display: inline-block;
+}
+
+@media (max-width: 700px){
+    right: 110px;
+    top: 568px;
 }
 `;
