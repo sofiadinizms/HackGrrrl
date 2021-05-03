@@ -1,57 +1,22 @@
-# How to run this boilerplate
-> A tutorial on how to create mongodb and cloudinary > accounts, install dependencies and run the project.
+# code-review-template
+Template utilizado para avalização de code review na Hack GRRRL 2021 ✨👩‍💻✨
 
-## 1. Install dependencies
-Run `yarn install` or `npm install` on both client and server folders, this command will install the project's dependencies.
 
-## 2. Create MongoDB cluster and get the url
-1. If you don't have one, [create a mongodb account](https://www.mongodb.com/cloud), then create the cluster for this project.
+## Objetivo e Motivações
+- Nosso objetivo com esse código era fazer uma página funcional o suficiente para que a Equipe do Hack Grrrl pudesse experimentar nossa solução e ter um sentimento mais real dela. Como desenvolvedoras nós, Sofia Diniz e Shellyda Barbosa, tínhamos como objetivo pôr em prática habilidade que ja possuíamos, aproveitar ao máximo nossa primeira experiência num hackaton, experimentar algumas coisas novas e tentar fazer um código simples, mas eficiente para nosso tempo e propósito.
 
-2. On the cluster's screen, go to **Database Access > Database Users > Add New Database User**, then create the user (remember the username and password, we're going to need them later).
+## Que tecnologias vocês usaram no hackathon?
+- Decidimos focar mais no Front-end, utilizando React.Js e Styled Components para tentar chegar o mais próximo possível do mockup elaborado por nossa designer. Já no backend, optamos pelo Keystone e Node.js, montando um banco de dados não-relacional e mais simples.
 
-3. Now go to **Network Access > Ip Whitelist > Add IP Adress > Current Ip Adress**, to add your current ip address to the cluster's whitelist, you will need to do this with every source that will access your database.
+## Por que vocês escolheram essas tecnologias?
+- Além dos motivos mencionados na pergunta acima, escolhemos fazer uma aplicação web com React.js e Styled Components por serem tecnologias que cumpriam bem as necessidades trazidas pelo mockup e com as quais amabas as desenvolvedoras já tem familiaridade. Essa união de fatores nos permitiu ter mais liberdade enquanto desenvolvíamos. Por outro lado, no backend utilizamos Keystone, que apesar de ambas já termos usado, não nos lembrávamos muito sobre, já que não usamos há um tempo. Isso acabou se tornando uma boa oportunidade 
 
-4. The mongo url will be:
+## Qual foi a maior desafio (da parte de desenvolvimento) durante o hackathon? Como vocês resolveram?
+- Nosso maior desafio foi adaptar o layout para que a responsividade não fosse comprometida. Tivemos algumas dificuldades com isso ao longo do Hackaton e para lidar com elas nós conversamos entre si para uma entender como a outra havia conseguido fazer certas coisas que estava tendo dificuldade e, dessa maneira, conseguirmos avançar juntas. Além disso, também conversamos muito com nossa Designer de UX/UI para fazer algumas adaptações que facilitassem isso.
 
-    mongodb://[USER]:[PASSWORD]@[SHARD_URL]/[DB_NAME]?ssl=true&replicaSet=[SHARD_NAME]&authSource=admin&retryWrites=true&w=majority
+## Qual foi o maior aprendizado (ou uma parte do código que vocês achem massa e estão orgulhosas)?
+- Para Shellyda, a melhor parte do código foram as animações no front-end, enquanto que para Sofia a melhor parte foia seção de comparação do valor entre dois produtos, pois a fez refletir muito sobre responsividade
 
-## 3. Create cloudinary account
-1. Go to [cloudinary images website](https://cloudinary.com/) and create an account.
+## Se vocês fossem participar de um hackathon semana que vem, fariam algo de diferente com relação às escolhas das tecnologias utilizadas?
+- Acho que mudariamos a tecnologia do Back-end para TypeORM, que nos daria mais liberdade para criar relacionamentos
 
-2. Under the **Account Details** section is a url named **API environment variable** this is your cloudinary url.
-
-## 4. Create a env file
-Create a file named `.env` and, inside of it, place this:
-
-    PORT=[PORT]
-    MONGO_URI=[MONGO_URI]
-    COOKIE_SECRET=[COOKIE_SECRET]
-    CLOUDINARY_URL=[CLOUDINARY_URL]
-
-Where:
-- [PORT] is which port you want the server to run on (usually 3001)
-- [MONGO_URI] is the uri you got from [step 2.3](##-2.-create-mongodb-cluster-and-get-the-url)
-- [COOKIE_SECRET] is a random string used for authentication on the admin.
-- [CLOUDINARY_URL] is the url you got from [step 3.2](##3.-create-cloudinary-account)
-
-## 5. Running in development
-To run this project in development mode, we will need to run two servers, the react one on `/client` and keystone on `/server`.
-
-The command to run react is `yarn start` or `npm start` depending on which tool was used on [installation](##1.-install-dependencies), the react server will run on port `3000` by default.
-
-Before running the keystone server, go to `/server/updates/0.0.1-admin.js` and change the admin user as you want, this user will be the first created, but you will be able to create others and delete this one later.
-
-To run keystoneJS server, use the command `node index.js`, the server will run on whatever port is in the variale in the env file, you will find the admin interface in `http://localhost:[PORT]/admin`
-
-## 6. Running in production
-To run the server in production, go to `/client` and run the command `yarn server`, this command will create a `react production optimized build` and move it to `/server`.
-
-Then go to `/server` and run `node index.js`, you will find the project on `http://localhost:[PORT]`
-
-- - -
-
-#### Developed by [Jorrmungandr](https://github.com/Jorrmungandr)
-
-This boilerplate was meant to be used in [CITi's](https://github.com/CITi-UFPE) selective process on 2020.1, to help the development of onepage websites.
-
-- - -
