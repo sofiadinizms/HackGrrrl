@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import Theme from './theme';
 
 export default createGlobalStyle`
   * {
@@ -28,18 +29,18 @@ export default createGlobalStyle`
     cursor: pointer,
   }
 
-  #root {
+  /* #root {
     position: relative;
-    min-height: calc(100vh - 75px);
-    margin: 75px 0 0 0;
-  }
+    /* min-height: calc(100vh - 75px); */
+    /* margin: 75px 0 0 0; 
+  } */
 
   ::-webkit-scrollbar {
     width: .4rem;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #8E7AD6;
+    background: ${Theme.colors.pink};
     border-radius: .3rem;
   }
 `;

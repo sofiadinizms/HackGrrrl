@@ -13,6 +13,7 @@ export const Container = styled.section`
   background-size: cover;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   .ant-btn-primary, .ant-btn-primary:hover, .ant-btn-primary:focus{
     background-color: ${Theme.colors.pink};

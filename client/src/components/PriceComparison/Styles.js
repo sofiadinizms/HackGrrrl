@@ -10,6 +10,7 @@ export const Container = styled.section`
   display: flex;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   @media (max-width: 768px){
     flex-direction: column;

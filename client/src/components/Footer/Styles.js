@@ -3,11 +3,12 @@ import Theme from '../../global/theme';
 
 export const Container = styled.section`
   height: 34vh;
-  width: 100%;
+  width: 100vw;
   background-color: ${Theme.colors.lightYellow};
   display: flex;
   flex-flow: row wrap;
   align-content: center;
+  overflow-x: hidden;
 `
 
 export const MangaRosa = styled.img`

@@ -7,6 +7,7 @@ import {
 import {
   AppBox
 } from './AppStyles';
+import GlobalStyle from '../src/global/globalStyles';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <PriceComparison />
       <FeatComparison />
       <Footer />
+      <GlobalStyle />
     </AppBox>
+
 
   );
 }

@@ -6,6 +6,7 @@ export const Container = styled.section`
   height: 100vh;
   width: 100vw;
   display: flex;
+  overflow-x: hidden;
 
   @media (max-width: 768px){
     flex-direction: column;
