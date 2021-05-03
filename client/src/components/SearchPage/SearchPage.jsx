@@ -8,6 +8,8 @@ import {
   Content
 } from './Styles';
 import Background from '../Assets/background.png';
+import Form from '../Form';
+
 
 function SearchPage(){
   const onSearch = value => console.log(value);
@@ -15,6 +17,7 @@ function SearchPage(){
 
   return(
     <Container img={Background} id='home'>
+      <Form></Form>
       <Content>
         <Title><b>Taxa Rosa</b> é o preço que se paga por ser consumidora</Title>
         <Description id='big'>Produtos de cuidados pessoais com marketing direcionado para mulheres são cerca de 13% mais caros do que produtos exatamente iguais direcionados para homens ou unissex.
