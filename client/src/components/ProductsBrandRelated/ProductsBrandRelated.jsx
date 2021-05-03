@@ -1,33 +1,21 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+
+import React from 'react';
 import {Button, Container, InfoContainer, Price, Title} from './styles';
 
-function ProducstBrandRelated(brand, price){
-  const [product, setProduct] = useState([]);
-
-  const loadProduct = async() => {
-    const res = await axios.get('http://localhost:3001/api/products');
-    setProduct(res.data);
-  }
-
-  useEffect(() => {
-    loadProduct();
-  }, [])
-  return(
-    <Container>
-      <InfoContainer>
+function ProducstBrandRelated({brand, price, link}){
+return(
+<Container>
+    <InfoContainer>
         <Title>
-          {brand}
+            Amazon
         </Title>
         <Price>
-          {price}
+            R$ 20,00
         </Price>
     </InfoContainer>
-      <Button href=''>{'> Comprar'}</Button>
-    </Container>
-  )
+    <Button href={link}>{'> Comprar'}</Button>
+</Container>
+)
 }
-
-
 
 export default ProducstBrandRelated;
